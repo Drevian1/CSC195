@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-    std::cout << "Soundwave Superior Autobots Inferior!\n";
+    cout << "Soundwave Superior Autobots Inferior!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
