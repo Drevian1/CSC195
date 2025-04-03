@@ -1,26 +1,28 @@
-// DataTypes.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// UserDataTypes.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include "Declarations.h"
 #include <iostream>
 using namespace std;
+
+
+
 int main()
 {
-    cout << "Soundwave Superior Autobots Inferior!\n";
+    std::cout << "User Data Types\n";
 
-    cout << "Size of int: " << sizeof(int) << endl;
+    Sandwich pastrami;
+    pastrami.meat = Pastrami;
+    pastrami.heatSandwich();
+    //pastrami.isHot = true;
+    pastrami.weight = 1.0f;
 
-    // Data type conversion 
+    cout << "size of sandwich " << sizeof(Sandwich) << endl;
+    cout << "size of pastrami " << sizeof(pastrami) << endl;
+    cout << "size of string " << sizeof(string) << endl;
+    cout << "size of float " << sizeof(float) << endl;
+    cout << "size of boolean " << sizeof(bool) << endl;
 
-    //implicit conversion - target data type has the capacity to store the original value
-    int i = 5;
-    float iflt = i;
-    double idbl = iflt;
-
-    //explicit conversion - explicitly inform the compiler that "I want to do this conversion"
-    double jdbl = 32.23748327483242;
-    float jflt = (float)jdbl; //Traditional C++ way
-
-    jflt = static_cast<float>(jdbl); //Modern C++ way
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
