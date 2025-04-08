@@ -10,9 +10,9 @@ int main() {
     std::cout << "Number of employees (max 5): ";
     std::cin >> numEmployees;
 
-    if (numEmployees > 5) numEmployees = 5; // Limit to 5 employees
+    if (numEmployees > 5) numEmployees = 5; 
 
-    Employee employees[5]; // Array of Employee objects
+    Employee employees[5]; 
 
     for (int i = 0; i < numEmployees; i++) {
         std::cout << "\nEnter details for Employee " << (i + 1) << ":\n";
