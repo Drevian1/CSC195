@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "[A] User Data Types", "[A] 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "[A] Java to C++", "[A] Java to C++\[A] Java to C++.vcxproj", "{EBBBDCCF-026F-4669-8610-CD14A389D4C2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Memory", "Memory\Memory.vcxproj", "{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{EBBBDCCF-026F-4669-8610-CD14A389D4C2}.Release|x64.Build.0 = Release|x64
 		{EBBBDCCF-026F-4669-8610-CD14A389D4C2}.Release|x86.ActiveCfg = Release|Win32
 		{EBBBDCCF-026F-4669-8610-CD14A389D4C2}.Release|x86.Build.0 = Release|Win32
+		{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}.Debug|x64.ActiveCfg = Debug|x64
+		{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}.Debug|x64.Build.0 = Debug|x64
+		{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}.Debug|x86.ActiveCfg = Debug|Win32
+		{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}.Debug|x86.Build.0 = Debug|Win32
+		{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}.Release|x64.ActiveCfg = Release|x64
+		{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}.Release|x64.Build.0 = Release|x64
+		{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}.Release|x86.ActiveCfg = Release|Win32
+		{55E6ACC0-DB13-4E1F-A17C-1565D57C099B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
