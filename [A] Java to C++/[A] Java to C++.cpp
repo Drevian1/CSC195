@@ -13,31 +13,31 @@ int main() {
     int numDice = 0;
     string rollAgain = "y";
 
-    std::cout << "Welcome to the Dice Roller!" << std::endl;
+    cout << "Welcome to the Dice Roller!" << endl;
 
-    while (!rollAgain.empty() && std::tolower(rollAgain[0]) == 'y') {
+    while (!rollAgain.empty() && tolower(rollAgain[0]) == 'y') {
 
         sides = 0;
         numDice = 0;
 
         
         while (sides <= 0) { 
-            std::cout << "Enter the number of sides for the die: ";
-            std::cin >> sides;
+            cout << "Enter the number of sides for the die: ";
+            cin >> sides;
 
             
             if (cin.fail()) {
                 cout << "Invalid input. Please enter a whole number." << endl;
                 cin.clear();
                 
-                cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 sides = 0;
             }
             else if (sides <= 0) {
                 cout << "Number of sides must be positive. Please try again." << endl;
                 
             }
-            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
 
         while (numDice <= 0) {
@@ -47,14 +47,14 @@ int main() {
             if (cin.fail()) {
                 cout << "Invalid input. Please enter a whole number." << endl;
                 cin.clear();
-                cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 numDice = 0; 
             }
             else if (numDice <= 0) {
                 cout << "Number of dice must be positive. Please try again." << endl;
             }
 
-            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
 
         uniform_int_distribution<> distrib(1, sides);
@@ -72,7 +72,7 @@ int main() {
         
         cout << "\nRoll again? (y/n): ";
         cin >> rollAgain;
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 
     } 
