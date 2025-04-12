@@ -37,6 +37,13 @@ int main()
     cout << &p << endl; // ADDRESS OF P
     cout << *p << endl; // DEREFERENCE P WHICH GETS THE VALUE IN THE ADDRESS STORED IN THE POINTER
 
+    cout << "----------------------------------------------" << endl;
+
+    int number1 = 1;
+    int* hnum1 = new int(4);
+
+    int* Arrnum = new int[4];
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

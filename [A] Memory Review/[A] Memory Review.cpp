@@ -8,45 +8,79 @@ struct Person
 	char name[32];
 	int id;
 };
+
+void Square(int& i)
+{
+	i = i * i;
+}
+
+void Double(int* i)
+{
+	*i = *i * 2;
+}
+
 int main()
 {
 	// ** REFERENCE **
-	//
+	// 
 	// declare an int variable and set the value to some number (less than 10)
 	// declare a int reference and set it to the int variable above
 	// output the int variable
+	int num = 5;
+	int& Rnum = num;
+	cout << Rnum << endl;
+
 	// set the int reference to some number
 	// output the int variable
-	// what happened to the int variable when the reference was changed? (insert answer)
+	// what happened to the int variable when the reference was changed? It allowed the variable to store numbers.
+	Rnum = 2;
+	cout << Rnum << endl;
 	// output the address of the int variable
 	// output the address of the int reference
-	// are the addresses the same or different? (insert answer)
+	// are the addresses the same or different? The addresses are the same.
+	cout << &num << endl;
+	cout << &Rnum << endl;
+
 	// ** REFERENCE PARAMETER **
 	//
-	// create a function above main() called Square that takes in an intparameter
-	// in the function, multiply the int parameter by itself and assign it backto the parameter(i = i * i)
+	// create a function above main() called Square that takes in an int parameter
+	// in the function, multiply the int parameter by itself and assign it back to the parameter (i = i * i)
 	// call the Square function with the int variable created in the REFERENCE section
+	Square(num);
 	// output the int variable to the console
+	cout << num << endl;
+
 	// !! notice how the variable has not changed, this is because we only passed the value to the function !!
 	// change the Square function to take a int reference
 	// !! notice how the calling variable has now changed, this is because we 'passed by reference' !!
 	// !! when a function takes a reference parameter, any changes to the parameter changes the calling variable ""
+
+
 	// ** POINTER VARIABLE **
-	//
+	// 
 	// declare an int pointer, set it to nullptr (it points to nothing)
 	// set the int pointer to the address of the int variable created in the REFERENCE section
+	int* ptr = nullptr;
+	ptr = &Rnum;
 	// output the value of the pointer
-	// what is this address that the pointer is pointing to? (insert answer)
+	// what is this address that the pointer is pointing to? The address of Rnum which is 00000017A16FF614.
 	// output the value of the object the pointer is pointing to (dereference the pointer)
+	cout << ptr << endl;
+
 	// ** POINTER PARAMETER **
 	//
 	// create a function above main() called Double that takes in an int pointer parameter
-	// in the function, multiply the int pointer parameter by 2 and assign it back to the parameter(i = i * 2)
+	// in the function, multiply the int pointer parameter by 2 and assign it back to the parameter (i = i * 2)
 	// !! make sure to dereference the pointer to set the value and not set the address !!
 	// call the Double function with the pointer created in the POINTER VARIABLE section
+	Double(ptr);
+	cout << ptr << endl;
+
 	// output the dereference pointer
 	// output the int variable created in the REFERENCE section
-	// did the int variable's value change when using the pointer?
+	// did the int variable's value change when using the pointer? Yes the int variable was multipled by 2 when passed into the double function.
+	Double(&num);
+	cout << num << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
