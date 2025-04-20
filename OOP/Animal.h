@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 class Animal
 {
@@ -17,7 +18,8 @@ public:
 		delete m_ptr;
 	}
 
-	virtual void Travel();
+	virtual void Travel(); //pure virtual / abstract function
+	virtual void Speak() = 0;
 	int GetLimbs() { return m_limbs; }
 	void SetLimbs(int limbs) { m_limbs = limbs;  }
 protected:

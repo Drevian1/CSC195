@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <list>
+#include <map>
 using namespace std;
 int main()
 {
@@ -22,8 +24,34 @@ int main()
 
     for (int i = 0; nums.size(); i++)
     {
-        cout << &nums[i] << endl;
+        cout << nums[i] << endl;
     }
+
+    
+
+    list<int> myList = { 1, 2, 3};
+    myList.push_front(2);
+
+    myList.remove(1);
+
+    
+
+    for (int i = 0; myList.size(); i++)
+    {
+        cout << &myList << endl;
+    }
+
+
+    map<int, string> mappy;
+    mappy[1] = "Top";
+    mappy[2] = "Bop";
+    mappy[3] = "Cop";
+
+    for(int i = 0; mappy.size(); i++)
+    {
+        cout << &mappy << endl;
+    }
+
 
 }
 

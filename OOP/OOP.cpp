@@ -4,29 +4,59 @@
 #include <iostream>
 #include "Animal.h"
 #include "Dog.h"
+#include "Snake.h"
+#include <vector>
 using namespace std;
 
 int main()
 {
-    Animal animal;             //Allocated memory on stack - no 'new; keyword
-    animal.Travel();
+    //Animal animal;             //Allocated memory on stack - no 'new; keyword
+    //animal.Travel();
 
-    Dog dog;
-    dog.Travel();
+    //Dog dog;
+    //dog.Travel();
 
-    Animal* ptrAnimal= new Animal;
+    //Animal* ptrAnimal= new Animal;
 
-    (*ptrAnimal).Travel();
-    ptrAnimal->Travel();
+    //(*ptrAnimal).Travel();
+    //ptrAnimal->Travel();
 
-    Animal* ptrDog = new Dog;
-    ptrDog-> Travel();
+    //Animal* ptrDog = new Dog;
+    //ptrDog-> Travel();
 
-    cout << animal.GetLimbs() << endl;
+    //cout << animal.GetLimbs() << endl;
 
+    //{
+    //    Animal* ptrAnim = new Animal;
+    //}
+
+    //ptrAmin->Travel(); throws error because ptrAnim out of scope
+
+    Snake python(true, 4);
+    python.Travel();
+    python.Speak();
+
+    // contianers to store class instances
+    vector<Animal*> animals;
+    animals.push_back(new Dog);
+    animals.push_back(new Dog);
+    animals.push_back(new Snake);
+
+    cout << "-------------------------------------" << endl;
+
+    // iterate to implement methods
+    for (Animal* ani : animals)
     {
-        Animal* ptrAnim = new Animal;
+        ani->Speak();
     }
+
+    for (Animal* ani : animals)
+    {
+        delete ani;
+    }
+
+    animals.clear();
+   
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
