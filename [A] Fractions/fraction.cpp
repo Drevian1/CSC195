@@ -1,35 +1,66 @@
+#include <iostream>
+#include "fraction.h"
 using namespace std;
 
-template <int T>
+#include <iostream>
+using namespace std;
 
-class Fraction {
-private:
-	int numerator;
-	int denominator;
-public:
-	
+namespace mathlibs {
 
-	Fraction()
-	{
-	
-	}
+	template <typename T>
 
-	Fraction(int numerator, int denominator) 
-	{
-		if (den == 0) 
+	class Fraction {
+	private:
+		int numerator;
+		int denominator;
+	public:
+
+
+		Fraction()
 		{
-			throw invalid_argument("Denominator cannot be 0");
-		}
-		denominator = den;
-	}
 
-	const simplify() 
-	{
-	
-	}
+		};
 
-	const toDoubble()
-	{
-	
-	}
-};
+		Fraction(int numerator, int denominator)
+		{
+
+		};
+
+		void Addition()
+		{
+			return numerator + numerator
+		};
+
+		void Substraction()
+		{
+			return numerator - numerator
+		};
+
+		void Multiply()
+		{
+			return numerator * numerator
+		};
+
+		void Division()
+		{
+			return numerator / numerator
+		};
+
+		void Simplify()
+		{
+
+		};
+
+		void toDouble()
+		{
+
+		};
+
+		friend ostream& operator << (ostream& ostream, Fraction& fraction);
+
+		friend istream& operator >> (istream& istream, Fraction& fraction);
+
+
+
+	};
+}
